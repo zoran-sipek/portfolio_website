@@ -1,0 +1,19 @@
+// Variables - varijable koje cemo koristiti kroz cijelu web stranicu
+$website-width: 1280px;
+$container-small: 960px;
+$main-color: #ffbc00;
+$light-color: #f4f4f4;
+$medium-color: #ccc;
+$dark-color: #333;
+// lokacija slike je ../img a ne ../dist/img zato sto kad napravimo compile css folder ce gledati na img folder, ne na dist folder - dakle moramo razmisljati da css ne zna za scss folder gdje mi radimo nas styling stranice.
+$bg-image: url("../img/showcase.jpg");
+
+// Set Text Color
+
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}
